@@ -1,0 +1,20 @@
+{
+  "name":"innomedia/references",
+  "description": "Reference Module",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name":"innomedia AG",
+      "email": "bk@innomedia.de"
+    }
+  ],
+  "require":{
+    "silverstripe/recipe-cms": "^4"
+  },
+  "autoload": {
+    "psr-4": {
+      "references\\": "src/"
+    }
+  }
+}
+  

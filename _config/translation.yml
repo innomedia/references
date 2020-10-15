@@ -1,0 +1,17 @@
+---
+Name: referencefluent
+Only:
+  moduleexists: 'tractorcow/silverstripe-fluent'
+After:
+  - '#versionedfiles'
+---
+Reference\DataObjects\Reference:
+  extensions:
+    - TractorCow\Fluent\Extension\FluentExtension
+  field_exclude:
+    - TagSortTitle
+Reference\DataObjects\ReferenceCategory:
+  extensions:
+    - TractorCow\Fluent\Extension\FluentExtension
+  field_exclude:
+    - TagSortTitle
