@@ -47,12 +47,21 @@ class ReferencePage extends Page
         );
 
         if (Config::inst()->get("ReferenceModuleConfig")["CategoriesEnabled"]) {
+            $ReferenceCategories = null;
+            if(array_key_exists("ContainCategoriesInPage",Config::inst()->get("ReferenceModuleConfig")) && Config::inst()->get("ReferenceModuleConfig")["ContainCategoriesInPage"])
+            {
+                $ReferenceCategories = $this->ReferenceCategories()->sort("Sort ASC");
+            }
+            else
+            {
+                $ReferenceCategories = ReferenceCategory::get()->sort("Sort ASC");
+            }
             $fields->addFieldToTab(
                 'Root.Kategorien',
                 GridField::create(
                     'ReferenceCategories',
                     'Kategorien',
-                    ReferenceCategory::get()->sort("Sort ASC"),
+                    $ReferenceCategories,
                     GridFieldConfig_RecordEditor::create(20)->addComponent(new GridFieldOrderableRows("Sort"))
                 )
             );
