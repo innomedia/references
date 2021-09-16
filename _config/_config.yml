@@ -4,3 +4,4 @@ Name: ReferenceModule
 #Overwrite in own project if necessary
 ReferenceModuleConfig:
   CategoriesEnabled: false
+  ContainCategoriesInPage: false
