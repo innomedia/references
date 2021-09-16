@@ -3,6 +3,7 @@
 namespace Reference\DataObjects;
 
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\TextField;
 use Reference\Pages\ReferencePage;
 use Reference\DataObjects\Reference;
 
@@ -22,6 +23,13 @@ class ReferenceCategory extends DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+
+        $fields->removeByName([
+           "ReferencePageID",
+           "Title",
+           "Sort"
+        ]);
+        $fields->addFieldToTab('Root.Main',TextField::create('Title','Titel'));
 
         return $fields;
     }
