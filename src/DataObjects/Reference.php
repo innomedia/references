@@ -95,7 +95,7 @@ class Reference extends DataObject
                     ->setCanCreate(false)
             );
         }
-
+        $this->extend('updateReferenceCMSFields', $fields);
         return $fields;
     }
 
