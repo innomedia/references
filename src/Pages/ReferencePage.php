@@ -66,6 +66,8 @@ class ReferencePage extends Page
                 )
             );
         }
+        
+        $this->extend('updateReferencePageCMSFields', $fields);
 
         return $fields;
     }
