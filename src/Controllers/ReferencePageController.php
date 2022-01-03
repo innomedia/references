@@ -6,6 +6,7 @@ use SilverStripe\ORM\PaginatedList;
 use Reference\DataObjects\Reference;
 use SilverStripe\Dev\Debug;
 use SilverStripe\View\ArrayData;
+use SilverStripe\Core\Config\Config;
 
 class ReferencePageController extends PageController
 {
@@ -20,7 +21,7 @@ class ReferencePageController extends PageController
         $posts = new PaginatedList($allPosts);
 
         // Set appropriate page size
-        $pageSize = 10;
+        $pageSize = (Config::inst()->get('ReferenceModuleConfig')["Pagesize"])?Config::inst()->get('ReferenceModuleConfig')["Pagesize"]:9;
         $posts->setPageLength($pageSize);
 
         // Set current page

@@ -5,3 +5,4 @@ Name: ReferenceModule
 ReferenceModuleConfig:
   CategoriesEnabled: false
   ContainCategoriesInPage: false
+  Pagesize: 9
