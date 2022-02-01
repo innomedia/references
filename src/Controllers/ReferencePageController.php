@@ -32,7 +32,10 @@ class ReferencePageController extends PageController
     }
 
     public function reference() {
-        $reference = Reference::get()->filter("URLSegment",$this->request->latestParam('ID'));
+        $reference = Reference::get()->filter([
+            "URLSegment" => $this->request->latestParam('ID'),
+            "ReferencePageID"   =>  $this->dataRecord->ID
+        ]);
         if(count($reference) == 1) {
             $templateData = [
                 "Reference" => $reference->First(),
