@@ -101,6 +101,6 @@ class Reference extends DataObject
 
     public function Link($action_ = null)
     {
-        return $this->ReferencePage()->Link() . "reference/" . $this->URLSegment;
+        return $this->ReferencePage()->Link() . "/reference/" . $this->URLSegment;
     }
 }
