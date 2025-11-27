@@ -2,11 +2,12 @@
 namespace Reference\Pages;
 
 use PageController;
-use SilverStripe\ORM\PaginatedList;
-use Reference\DataObjects\Reference;
 use SilverStripe\Dev\Debug;
 use SilverStripe\View\ArrayData;
+use Reference\DataObjects\Reference;
 use SilverStripe\Core\Config\Config;
+use SilverStripe\Model\List\ArrayList;
+use SilverStripe\Model\List\PaginatedList;
 
 class ReferencePageController extends PageController
 {
