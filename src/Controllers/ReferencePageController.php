@@ -3,7 +3,7 @@ namespace Reference\Pages;
 
 use PageController;
 use SilverStripe\Dev\Debug;
-use SilverStripe\View\ArrayData;
+use SilverStripe\Model\ArrayData;
 use Reference\DataObjects\Reference;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Model\List\ArrayList;
